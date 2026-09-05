@@ -1,0 +1,134 @@
+/* =========================
+   Skills entrance animation
+   ========================= */
+
+.skills-section .skills-label {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-20px);
+  filter: blur(5px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+.skills-section .skills-title {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(6px);
+  transition:
+    opacity 0.7s ease 100ms,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 100ms,
+    filter 0.7s ease 100ms;
+}
+
+.skills-section .skills-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+  filter: blur(8px);
+  transition:
+    opacity 0.8s ease 150ms,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 150ms,
+    filter 0.8s ease 150ms;
+}
+
+
+/* Categories */
+
+.skills-section .skill-group {
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(5px);
+
+  transition:
+    opacity 0.55s ease var(--group-delay),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--group-delay),
+    filter 0.55s ease var(--group-delay);
+}
+
+
+/* Individual pills */
+
+.skills-section .skill-pill {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px) scale(0.9);
+  filter: blur(3px);
+
+  transition:
+    opacity 0.4s ease var(--pill-delay),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) var(--pill-delay),
+    filter 0.4s ease var(--pill-delay),
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* =========================
+   Activated state
+   ========================= */
+
+.skills-section.skills-visible .skills-label {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+.skills-section.skills-visible .skills-title {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.skills-section.skills-visible .skills-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.skills-section.skills-visible .skill-group {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.skills-section.skills-visible .skill-pill {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+
+/* =========================
+   Fancy hover
+   ========================= */
+
+.skills-section .skill-pill:hover {
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 0 15px rgba(255, 255, 255, 0.04);
+}
+
+
+/* Respect reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-section *,
+  .skills-section *::before,
+  .skills-section *::after {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .skills-section .skills-label,
+  .skills-section .skills-title,
+  .skills-section .skills-card,
+  .skills-section .skill-group,
+  .skills-section .skill-pill {
+    opacity: 1;
+  }
+}
