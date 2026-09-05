@@ -7,6 +7,7 @@ const basePath =isProduction?"/Portofolio":""
 const nextConfig: NextConfig = {
   basePath,  
   output: "export",
+  distDir: "dist",
   env: {
     basePath
   }
