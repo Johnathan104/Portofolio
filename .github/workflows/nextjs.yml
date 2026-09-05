@@ -75,6 +75,13 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Debug build output
+        run: |
+          echo "Contents of workspace root:"
+          ls -la
+          echo "Looking for dist or out:"
+          ls -la ./dist 2>/dev/null || echo "no ./dist"
+          ls -la ./out 2>/dev/null || echo "no ./out"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
