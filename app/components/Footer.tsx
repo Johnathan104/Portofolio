@@ -14,16 +14,6 @@ function LinkedinIcon() {
   );
 }
 
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
 export default function Footer() {
   return (
     <footer className="w-full border-t border-tertiary/20 border-dashed mt-12">
@@ -34,13 +24,6 @@ export default function Footer() {
           <p className="text-sm text-tertiary/60 max-w-[32ch]">
             Full-stack developer focused on building clean, practical software.
           </p>
-        </div>
-
-        {/* middle: quick links */}
-        <div className="flex flex-col gap-2">
-          <span className="tag eyebrow text-xs text-tertiary/50">Navigate</span>
-          <a href="#hero" className="mono-text text-sm text-tertiary/70 hover:text-tertiary transition-colors">Home</a>
-          <a href="#background" className="mono-text text-sm text-tertiary/70 hover:text-tertiary transition-colors">Background</a>
         </div>
 
         {/* right: contact / socials */}
@@ -57,22 +40,13 @@ export default function Footer() {
               <GithubIcon />
             </a>
             <a
-              href="https://linkedin.com/in/your-handle"
+              href="https://www.linkedin.com/in/james-956b25257/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="flex items-center justify-center w-8 h-8 rounded-full border border-tertiary/30 text-tertiary/70 hover:bg-tertiary hover:text-dark transition-colors"
             >
               <LinkedinIcon />
-            </a>
-            <a
-              href="https://instagram.com/your-handle"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="flex items-center justify-center w-8 h-8 rounded-full border border-tertiary/30 text-tertiary/70 hover:bg-tertiary hover:text-dark transition-colors"
-            >
-              <InstagramIcon />
             </a>
           </div>
         </div>
