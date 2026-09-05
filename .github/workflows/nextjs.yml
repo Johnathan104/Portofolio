@@ -82,6 +82,8 @@ jobs:
           echo "Looking for dist or out:"
           ls -la ./dist 2>/dev/null || echo "no ./dist"
           ls -la ./out 2>/dev/null || echo "no ./out"
+      - name: Debug Next.js version
+        run: npx next --version
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
