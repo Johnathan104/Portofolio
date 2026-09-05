@@ -66,7 +66,7 @@ function Project({data}:PropType) {
         >
         {/* thumbnail */}
         <div className="w-full sm:w-[240px] h-[160px] sm:h-auto bg-white shrink-0">
-            <img src={data.thumbnail} alt={data.name} className="w-full h-full object-cover" />
+            <img src={`${process.env.basePath}${data.thumbnail}`} alt={data.name} className="w-full h-full object-cover" />
         </div>
 
         {/* content */}
@@ -126,7 +126,7 @@ function Project({data}:PropType) {
                 {data.other_pics && data.other_pics.length > 0 && (
                     <div className="relative w-full h-[280px] sm:h-[360px] bg-white">
                         <img
-                            src={data.other_pics[activeImg]}
+                            src={`${process.env.basePath}${data.other_pics[activeImg]}`}
                             alt={`${data.name} screenshot ${activeImg + 1}`}
                             className="w-full h-full object-contain"
                         />

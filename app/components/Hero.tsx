@@ -1,3 +1,4 @@
+
 function GithubIcon() {
   return (
     <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -34,76 +35,79 @@ function DownloadIcon() {
   );
 }
 
-export default function Hero(){
- return(<div className="hero shadow-lg border-secondary border">
-  <div className="hero-columns flex gap-8 ">
-    {/* left side */}
-    <div className="flex-1 rounded-sm w-fit flex flex-col items-start p-4">
-      <div className="photo-frame">
-        <div className="rounded-full border-dark border w-[100px] h-[100px] overflow-hidden">
-          <img src="/images/work(1).jpeg" alt="work_pic" width={100} height={100} />
+function Hero(){
+  return(
+  <div className="hero shadow-lg border-secondary border">
+    <div className="hero-columns flex gap-8 ">
+      {/* left side */}
+      <div className="flex-1 rounded-sm w-fit flex flex-col items-start p-4">
+        <div className="photo-frame">
+          <div className="rounded-full border-dark border w-[100px] h-[100px] overflow-hidden">
+            <img src={`${process.env.basePath}/images/work(1).jpeg`} alt="work_pic" width={100} height={100} />
+          </div>
+        </div>
+
+        <h1 className="font-bold text-3xl w-fit mt-4 text-ink">James</h1>
+        <span className="role-label role-chip w-fit">Web Developer</span>
+
+        <div className="flex gap-3 mt-4">
+          <a
+            href="https://github.com/Johnathan104"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="flex items-center justify-center w-9 h-9 rounded-full border border-secondary text-secondary hover:bg-dark hover:text-white transition-colors"
+          >
+            <GithubIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/james-956b25257/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="flex items-center justify-center w-9 h-9 rounded-full border border-secondary text-secondary hover:bg-dark hover:text-white transition-colors"
+          >
+            <LinkedinIcon />
+          </a>
+          <a
+            href="https://instagram.com/jn.tanoe"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="flex items-center justify-center w-9 h-9 rounded-full border border-secondary text-secondary hover:bg-dark hover:text-white transition-colors"
+          >
+            <InstagramIcon />
+          </a>
         </div>
       </div>
 
-      <h1 className="font-bold text-3xl w-fit mt-4 text-ink">James</h1>
-      <span className="role-label role-chip w-fit">Web Developer</span>
+      {/* right side */}
+      <div className="flex-2 divider flex-1 p-4 flex flex-col border-secondary">
+        <span className="tag eyebrow text-dark/70">Portfolio</span>
+        <h1 className="font-bold text-3xl w-fit mt-1 text-ink">Web developer</h1>
+        <span className="tag eyebrow text-dark/70">Frontend and Backend Developer</span>
+        <p className="text-dark text-sm mt-4">
+          Passionate web developer eager to learn and grow in the field. 
+          Skilled in Both Frontend and Backend development, with a strong foundation in Javascript and React.
+          Eager to learn new technologies and frameworks.
+        </p>
 
-      <div className="flex gap-3 mt-4">
-        <a
-          href="https://github.com/Johnathan104"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          className="flex items-center justify-center w-9 h-9 rounded-full border border-secondary text-secondary hover:bg-dark hover:text-white transition-colors"
+        <button
+          className="cta group mt-6 self-start relative flex items-center gap-2 rounded-full text-white px-6 py-3 text-sm font-medium overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-[0_8px_20px_-6px_rgba(35,76,106,0.6)] hover:shadow-[0_10px_24px_-6px_rgba(35,76,106,0.75)]"
+          style={{ backgroundImage: "linear-gradient(135deg, var(--primary-color), var(--secondary-color))" }}
         >
-          <GithubIcon />
-        </a>
-        <a
-          href="https://linkedin.com/in/your-handle"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-          className="flex items-center justify-center w-9 h-9 rounded-full border border-secondary text-secondary hover:bg-dark hover:text-white transition-colors"
-        >
-          <LinkedinIcon />
-        </a>
-        <a
-          href="https://instagram.com/your-handle"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          className="flex items-center justify-center w-9 h-9 rounded-full border border-secondary text-secondary hover:bg-dark hover:text-white transition-colors"
-        >
-          <InstagramIcon />
-        </a>
+          <span className="absolute inset-0 -translate-x-full bg-white/20 skew-x-[-20deg] transition-transform duration-500 group-hover:translate-x-full" />
+          <span className="relative flex items-center gap-2">
+            <span className="transition-transform duration-200 group-hover:translate-y-0.5">
+              <DownloadIcon />
+            </span>
+            Download CV
+          </span>
+        </button>
       </div>
     </div>
-
-    {/* right side */}
-    <div className="flex-2 divider flex-1 p-4 flex flex-col border-secondary">
-      <span className="tag eyebrow text-dark/70">Portfolio</span>
-      <h1 className="font-bold text-3xl w-fit mt-1 text-ink">Web developer</h1>
-      <span className="tag eyebrow text-dark/70">Frontend and Backend Developer</span>
-      <p className="text-dark text-sm mt-4">
-        Passionate web developer eager to learn and grow in the field. 
-        Skilled in Both Frontend and Backend development, with a strong foundation in Javascript and React.
-        Eager to learn new technologies and frameworks.
-      </p>
-
-      <button
-        className="cta group mt-6 self-start relative flex items-center gap-2 rounded-full text-white px-6 py-3 text-sm font-medium overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-[0_8px_20px_-6px_rgba(35,76,106,0.6)] hover:shadow-[0_10px_24px_-6px_rgba(35,76,106,0.75)]"
-        style={{ backgroundImage: "linear-gradient(135deg, var(--primary-color), var(--secondary-color))" }}
-      >
-        <span className="absolute inset-0 -translate-x-full bg-white/20 skew-x-[-20deg] transition-transform duration-500 group-hover:translate-x-full" />
-        <span className="relative flex items-center gap-2">
-          <span className="transition-transform duration-200 group-hover:translate-y-0.5">
-            <DownloadIcon />
-          </span>
-          Download CV
-        </span>
-      </button>
-    </div>
   </div>
-</div>
-      )
+  )
 }
+
+export default Hero

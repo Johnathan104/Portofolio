@@ -3,10 +3,14 @@ import type { NextConfig } from "next";
 
 
 const isProduction = process.env.NODE_ENV == "production"
+const basePath =isProduction?"/Portofolio":""
 const nextConfig: NextConfig = {
-  basePath: isProduction?"/Portofolio":"",  
+  basePath,  
   output: "export",
-  distDir: "dist"
+  distDir: "dist",
+  env: {
+    basePath
+  }
   /* config options here */
 };
 
