@@ -10,6 +10,7 @@ const projects = [
     stack: ["React", "Laravel"],
     other_pics: ["/images/simanteb/1.png", "/images/simanteb/2.png", "/images/simanteb/3.png", "/images/simanteb/4.png"],
     desc: "Full-stack maintenance management system for school facilities, built around temperature and electricity sensor data. RESTful API connecting a React frontend to a Laravel backend, giving maintenance staff a CRUD interface to monitor readings and manage tasks.",
+    git_link:'/simanteb-new'
   },
   {
     name: "ISCCO",
@@ -19,6 +20,7 @@ const projects = [
     stack: ["Laravel", "Inertia", "React", "Flask", "ML"],
     other_pics: ["/images/iscco/1.png", "/images/iscco/2.png", "/images/iscco/3.png", "/images/iscco/4.png", "/images/iscco/5.png", "/images/iscco/6.png"],
     desc: "Full-stack project-tracking platform with a custom IFC viewer mapping design changes onto 3D BIM models, plus a separate Flask service running a custom ML model that predicts cost-overrun risk from user-input factors.",
+    git_link:'/bridgelaravel'
   },
   {
     name: "ACCESSA",
@@ -28,6 +30,7 @@ const projects = [
     stack: ["React", "Python", "Vosk"],
     other_pics: ["/images/accessa/1.png", "/images/accessa/2.png"],
     desc: "Website built for accessibility, aimed at visually impaired students. React frontend with a voice module for spoken navigation options, connected to a Python backend running Vosk for offline speech-to-text and choice-based navigation.",
+    git_link:"/sman96-denah"
   },
   {
     name: "Tokoali",
@@ -37,12 +40,13 @@ const projects = [
     stack: ["React", "Go", "REST API"],
     other_pics: ["/images/toko-ali/1.png", "/images/toko-ali/2.png", "/images/toko-ali/3.png"],
     desc: "Stock management website built for a local shop. React frontend connecting to a REST API backend built in Go — chosen deliberately to broaden backend language experience.",
+    git_link:"/tokoali"
   },
 ]
 
 function Projects() {
   return (
-    <div className="w-full md:max-w-[800px] mt-4">
+    <div className="w-full md:max-w-[800px] mt-4 border-t border-secondary border-dashed py-6">
       <span className="tag eyebrow text-secondary">Work</span>
       <AnimatedHeader text="Projects"/>
 

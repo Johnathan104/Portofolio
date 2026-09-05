@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useRef, useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Github } from '@boxicons/react'
 
 interface ProjectData {
     name: string,
@@ -9,7 +10,8 @@ interface ProjectData {
     date: string,
     stack: string[],
     other_pics: string[]|null,
-    desc: string
+    desc: string,
+    git_link: string|null
 }
 interface PropType{
     data:ProjectData
@@ -96,13 +98,20 @@ function Project({data}:PropType) {
                 </span>
                 ))}
             </div>
-
-            <button
-                onClick={openModal}
-                className="mono-text text-sm mt-4 self-start px-4 py-1.5 rounded-full border border-tertiary/30 text-tertiary/80 hover:bg-tertiary hover:text-dark transition-colors"
-            >
-                Details
-            </button>
+            <div className="flex flex-row items-center mt-4">
+                <button
+                    onClick={openModal}
+                    className="mono-text text-sm  self-start px-4 py-1.5 rounded-full border border-tertiary/30 text-tertiary/80 hover:bg-tertiary hover:text-dark transition-colors"
+                >
+                    Details
+                </button>
+                <a href={"https://github.com/Johnathan104"+data.git_link}>
+                    <button className='text-secondary ms-4 h-fit flex mono-text transition ease-out hover:text-tertiary'>
+                        <Github pack="brands"/> git
+                    </button>
+                </a>
+            </div>
+            
         </div>
     </div>
 

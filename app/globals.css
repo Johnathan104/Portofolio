@@ -28,7 +28,9 @@
     --foreground: #ededed;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   /* background: linear-gradient(180deg, var(--ink), #000000); */
   color: var(--dark-color);

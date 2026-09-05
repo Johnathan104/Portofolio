@@ -1,3 +1,4 @@
+import { Folder } from "@boxicons/react";
 
 function GithubIcon() {
   return (
@@ -72,19 +73,37 @@ function Hero(){
           Skilled in Both Frontend and Backend development, with a strong foundation in Javascript and React.
           Eager to learn new technologies and frameworks.
         </p>
-
-        <button
-          className="cta group mt-6 self-start relative flex items-center gap-2 rounded-full text-white px-6 py-3 text-sm font-medium overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-[0_8px_20px_-6px_rgba(35,76,106,0.6)] hover:shadow-[0_10px_24px_-6px_rgba(35,76,106,0.75)]"
-          style={{ backgroundImage: "linear-gradient(135deg, var(--primary-color), var(--secondary-color))" }}
-        >
-          <span className="absolute inset-0 -translate-x-full bg-white/20 skew-x-[-20deg] transition-transform duration-500 group-hover:translate-x-full" />
-          <span className="relative flex items-center gap-2">
-            <span className="transition-transform duration-200 group-hover:translate-y-0.5">
-              <DownloadIcon />
+        
+        <div className="flex justify-evenly mt-6 w-full  items-center">
+          <a href="#projects">
+            <button
+              className="group relative overflow-hidden border border-secondary rounded-[25px] py-2 px-4 w-fit transition ease-in bg-ink hover:bg-tertiary h-fit text-secondary hover:text-ink"
+            >
+              <span className="absolute inset-0 -translate-x-full bg-white/20 skew-x-[-20deg] transition-transform duration-500 group-hover:translate-x-full" />
+              <span className="relative flex items-center gap-2">
+                <span className="transition-transform duration-200 group-hover:translate-y-0.5">
+                  <Folder/>
+                </span>
+                Projects
+              </span>
+            </button>
+          </a>
+          <a href={`${process.env.basePath}/James_CV(1).pdf`}>
+          <button
+            className="cta group self-start relative flex items-center gap-2 rounded-full text-white px-6 py-3 text-sm font-medium overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-[0_8px_20px_-6px_rgba(35,76,106,0.6)] hover:shadow-[0_10px_24px_-6px_rgba(35,76,106,0.75)]"
+            style={{ backgroundImage: "linear-gradient(135deg, var(--primary-color), var(--secondary-color))" }}
+          >
+            <span className="absolute inset-0 -translate-x-full bg-white/20 skew-x-[-20deg] transition-transform duration-500 group-hover:translate-x-full" />
+            <span className="relative flex items-center gap-2">
+              <span className="transition-transform duration-200 group-hover:translate-y-0.5">
+                <DownloadIcon />
+              </span>
+              Download CV
             </span>
-            Download CV
-          </span>
-        </button>
+          </button>
+          </a>
+        </div>
+        
       </div>
     </div>
   </div>
